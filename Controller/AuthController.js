@@ -46,7 +46,7 @@ const signup = async (req, res) => {
     });
   }
 };
-const login = async (req, res) => {
+const  login = async (req, res) => {
   try {
     const { email, password } = req.body;
 
@@ -71,7 +71,7 @@ const login = async (req, res) => {
     // Generate JWT token
     const jwtToken = jwt.sign(
       { email: existingUser.email, id: existingUser._id },
-      process.env.JWT_SECRET || "default_secret", // Replace "default_secret" in production
+      process.env.JWT_SECRET ,
       { expiresIn: "24h" }
     );
 
