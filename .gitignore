@@ -1,11 +1,13 @@
-# Node modules
+# Node modules (ignore dependencies)
 node_modules/
 
-# Environment variables
+# Environment variables (keep credentials secret)
 .env
 
 # Logs
+logs/
 *.log
 
-# Cache files
-.cache/
+# Cache & Temp files
+*.cache
+*.tmp
